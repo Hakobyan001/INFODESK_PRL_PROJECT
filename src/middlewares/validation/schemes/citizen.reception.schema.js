@@ -14,7 +14,7 @@ const CitizenReceptionSchema = {
 
   addSchema: {
     body: Joi.object({
-      title:Joi.string().min(4).max(550),
+      title: Joi.string().min(4).max(550),
       text: Joi.string().min(8).max(550),
       subtitle1: Joi.string().min(1).max(550),
       subtitle2: Joi.string().min(1).max(550)
@@ -32,10 +32,10 @@ const CitizenReceptionSchema = {
       subtitle2: Joi.string().min(1).max(550)
 
     }).or(
-      "title",
+      'title',
       'text',
-      "subtitle1",
-      "subtitle2"
+      'subtitle1',
+      'subtitle2'
     )
   }
 };

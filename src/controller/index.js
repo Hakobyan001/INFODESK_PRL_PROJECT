@@ -7,3 +7,4 @@ export { default as StandingCommitteeController } from './standing.committee.con
 export { default as AcceptabilityController } from './acceptability.controller';
 export { default as SecondAcceptabilityController } from './second.acceptability.controller';
 export { default as TimeStampController } from './timestamp.controller';
+export { default as SuperAdminController } from './super.admin.controller';

@@ -8,3 +8,4 @@ export { default as Tex2tModel } from './text2.model ';
 export { default as AcceptabilityModel } from './acceptability.model';
 export { default as SecondAcceptabilityModel } from './second.acceptability.model';
 export { default as TimeStampModel } from './time.stamp.model';
+export { default as SuperAdminModel } from './super.admin.model';

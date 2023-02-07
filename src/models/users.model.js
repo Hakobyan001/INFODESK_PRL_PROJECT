@@ -47,8 +47,8 @@ class UsersModel extends Model {
     this.updated_at = date;
   }
 
-  static findByUsername(login) {
-    return UsersModel.query().findOne({ login });
+  static findByUsername(user) {
+    return UsersModel.query().findOne({ user });
   }
 
   // Methods
@@ -60,9 +60,9 @@ class UsersModel extends Model {
   //   return UsersModel.query().findById(id).from('mps');
   // }
 
-  // static create(addToDB) {
-  //   return UsersModel.query().insert(addToDB);
-  // }
+  static create(addToDB) {
+    return UsersModel.query().insert(addToDB);
+  }
 
   // }
 

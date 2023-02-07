@@ -4,8 +4,7 @@ import Joi from 'joi';
 // Local MOdules
 import { ID } from './type';
 
-const StandingCommitteeSchema = {
-
+const SuperAdminSchema = {
   getByIdSchema: {
     params: Joi.object({
       id: ID.required()
@@ -14,8 +13,8 @@ const StandingCommitteeSchema = {
 
   addSchema: {
     body: Joi.object({
-      title: Joi.string().min(4).max(550),
-      text: Joi.string().min(8).max(550)
+      user: Joi.string().min(4).max(20).required(),
+      pwd: Joi.string().min(4).max(20).required()
     })
   },
 
@@ -24,14 +23,11 @@ const StandingCommitteeSchema = {
       id: ID.required()
     }),
     body: Joi.object({
-      title: Joi.string().min(4).max(550),
-      text: Joi.string().min(8).max(550)
-
+      pwd: Joi.string().min(4).max(20).required()
     }).or(
-      'title',
-      'text'
+      'pwd'
     )
   }
 };
 
-export default StandingCommitteeSchema;
+export default SuperAdminSchema;

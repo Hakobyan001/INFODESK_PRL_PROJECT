@@ -1,10 +1,10 @@
 // NPM Modules
 import { Model } from 'objection';
 
-class Text2Model extends Model {
+class SuperAdminModel extends Model {
   static get idColumn() { return 'id'; }
 
-  static get tableName() { return 'text2'; }
+  static get tableName() { return 'users'; }
 
   static get jsonSchema() {
     return {
@@ -17,8 +17,15 @@ class Text2Model extends Model {
         surname: { type: 'string', minLength: 1, maxLength: 255 },
         phonenumber: { type: 'string', minLength: 1, maxLength: 255 },
         key: { type: 'string', minLength: 1, maxLength: 255 }
+
       }
     };
+  }
+
+  $formatJson(json) {
+    json = super.$formatJson(json);
+    delete json.pwd;
+    return json;
   }
 
   $beforeInsert() {
@@ -31,24 +38,25 @@ class Text2Model extends Model {
     this.updated_at = date;
   }
 
-  static getText() {
-    return Text2Model.query().select('*').orderBy('id');
-  }
-
-  static edit(id, update) {
-    return Text2Model.query().update(update).where({ id }).orderBy('id')
-      .returning('*');
+  // Methods
+  static getAdmin() {
+    return SuperAdminModel.query().select('*').where('role', '=', 'admin');
   }
 
   static delete(id) {
-    return Text2Model.query().select('*').where('id', '=', id).del()
+    return SuperAdminModel.query().select('*').where('id', '=', id).del()
       .orderBy('id')
       .returning('*');
   }
 
   static create(addToDB) {
-    return Text2Model.query().insert(addToDB);
+    return SuperAdminModel.query().insert(addToDB).onConflict('user').ignore();
+  }
+
+  static edit(id, update) {
+    return SuperAdminModel.query().update(update).where({ id }).orderBy('id')
+      .returning('*');
   }
 }
 
-export default Text2Model;
+export default SuperAdminModel;

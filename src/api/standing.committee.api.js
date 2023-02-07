@@ -19,7 +19,7 @@ router.post('/',
   StandingCommitteeController.add);
 
 router.put('/:id',
-  // AuthMiddleware.authenticateFor(['admin']),
+  AuthMiddleware.authenticateFor(['admin']),
   StandingCommitteeValidationMiddleware.validateEditArgs,
   StandingCommitteeController.edit);
 

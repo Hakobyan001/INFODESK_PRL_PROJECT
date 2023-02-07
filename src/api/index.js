@@ -10,6 +10,7 @@ import text2 from './standing.committee.api';
 import acceptability from './acceptability.api';
 import secondacceptability from './second.acceptability.api';
 import timestamp from './timestamp.api';
+import superAdmin from './super.admin.api';
 
 const app = express();
 
@@ -25,5 +26,6 @@ app.use('/meets', text2);
 app.use('/acceptability', acceptability);
 app.use('/secondacceptability', secondacceptability);
 app.use('/timestamp', timestamp);
+app.use('/superAdmin', superAdmin);
 
 export default app;

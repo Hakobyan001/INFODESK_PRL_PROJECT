@@ -13,6 +13,9 @@
   },
   "author": "InPoint",
   "devDependencies": {
+    "@babel/register": "^7.18.9",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^7.0.0-bridge.0",
     "eslint": "^7.9.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-node": "^11.1.0",
@@ -20,10 +23,10 @@
     "eslint-plugin-standard": "^4.0.1"
   },
   "dependencies": {
-    "@babel/cli": "^7.18.10",
-    "@babel/core": "^7.18.13",
-    "@babel/node": "^7.18.10",
-    "@babel/preset-env": "^7.18.10",
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/node": "^7.20.7",
+    "@babel/preset-env": "^7.20.2",
     "@joi/date": "^2.1.0",
     "@meanie/mongoose-to-json": "^2.6.0",
     "babel": "^6.23.0",

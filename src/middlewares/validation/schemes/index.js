@@ -7,3 +7,4 @@ export { default as CitizenReceptionSchema } from './citizen.reception.schema';
 export { default as StandingCommitteeSchema } from './standing.committee.schema';
 export { default as UnitsSchema } from './units.schema';
 export { default as TimeStampSchema } from './timestamp.schema';
+export { default as SuperAdminSchema } from './super.admin.schema';

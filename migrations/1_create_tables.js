@@ -80,8 +80,8 @@ function up(pg) {
     })
     .createTable('users', (table) => {
       table.increments('id').primary();
-      table.string('login').notNullable();
-      table.string('password').notNullable();
+      table.string('user').notNullable().unique();
+      table.string('pwd').notNullable();
       table.string('role').notNullable();
       table.dateTime('created_at');
       table.dateTime('updated_at');

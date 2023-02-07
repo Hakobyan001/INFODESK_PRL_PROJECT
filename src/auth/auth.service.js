@@ -38,8 +38,8 @@ export default class AuthService {
   }
 
   static async refresh(token) {
-    let user = AuthService.validateRefreshToken(token);
-    user.role = ['admin']
+    const user = AuthService.validateRefreshToken(token);
+    user.role = ['admin'];
     const { accessToken, refreshToken } = AuthService.generateTokens(user);
 
     const payload = {
@@ -50,24 +50,23 @@ export default class AuthService {
     return payload;
   }
 
-  static async login(login, password) {
-    const user = await UsersModel.findByUsername(login);
+  static async login(user, pwd) {
+    const userAdmin = await UsersModel.findByUsername(user);
 
-    if (!user) throw new InputValidationError('Invalid username or password');
-    if (!CryptoUtil.isValidPassword(password, user.password)) {
+    if (!userAdmin) throw new InputValidationError('Invalid username or password');
+    if (!CryptoUtil.isValidPassword(pwd, userAdmin.pwd)) {
       throw new InputValidationError('Invalid username or password');
     }
 
-    delete user.password;
-    const { accessToken, refreshToken } = AuthService.generateTokens({ ...user });
+    delete userAdmin.pwd;
+    const { accessToken, refreshToken } = AuthService.generateTokens({ ...userAdmin });
 
     const payload = {
-      id: user.id,
-      login: user.login,
-      role: [user.role],
+      id: userAdmin.id,
+      user: userAdmin.user,
+      role: [userAdmin.role],
       accessToken,
       refreshToken
-
     };
     return payload;
   }

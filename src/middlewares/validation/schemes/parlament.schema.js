@@ -38,7 +38,7 @@ const ParlamentSchema = {
       'lastname',
       'surname',
       'phonenumber',
-      "key"
+      'key'
     )
   }
 };
