@@ -18,7 +18,7 @@ async function seed(pg) {
       firstname: 'Ալեն',
       lastname: 'Սիմոնյան',
       surname: 'Ռոբերտի',
-      phonenumber: '14-55',
+      phonenumber: '14-88',
       key: true,
       created_at: new Date().toISOString(),
       updated_at: new Date().toISOString()
@@ -26,8 +26,8 @@ async function seed(pg) {
     {
       firstname: 'Հակոբ',
       lastname: 'Արշակյան',
-      surname: 'Աշոտի',
-      phonenumber: '14-78',
+      surname: '',
+      phonenumber: '14-26',
       key: false,
       created_at: new Date().toISOString(),
       updated_at: new Date().toISOString()
@@ -35,8 +35,8 @@ async function seed(pg) {
     {
       firstname: 'Ռուբեն',
       lastname: 'Ռուբինյան',
-      surname: 'Վալոդի',
-      phonenumber: '14-45',
+      surname: '',
+      phonenumber: '13-35',
       key: true,
       created_at: new Date().toISOString(),
       updated_at: new Date().toISOString()
@@ -45,16 +45,7 @@ async function seed(pg) {
       firstname: 'Տիգրան',
       lastname: 'Աբրահամյան',
       surname: 'Հրանտի',
-      phonenumber: '14-34',
-      key: false,
-      created_at: new Date().toISOString(),
-      updated_at: new Date().toISOString()
-    },
-    {
-      firstname: 'Աշոտիկ',
-      lastname: 'Սիմոնյան',
-      surname: 'Հրանտի',
-      phonenumber: '14-63',
+      phonenumber: '13-38',
       key: false,
       created_at: new Date().toISOString(),
       updated_at: new Date().toISOString()
@@ -63,7 +54,7 @@ async function seed(pg) {
       firstname: 'Վահագն',
       lastname: 'Ալեքսանյան',
       surname: 'Հովիկի',
-      phonenumber: '14-88',
+      phonenumber: '16-86',
       key: false,
       created_at: new Date().toISOString(),
       updated_at: new Date().toISOString()
@@ -72,8 +63,53 @@ async function seed(pg) {
       firstname: 'Էդուարդ',
       lastname: 'Աղաջանյան',
       surname: 'Արթուրի',
-      phonenumber: '14-35',
+      phonenumber: '14-18',
       key: true,
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString()
+    },
+    {
+      firstname: 'Դավիդ',
+      lastname: 'Առուշանյան',
+      surname: 'Վալոդյայի',
+      phonenumber: '12-38',
+      key: false,
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString()
+    },
+    {
+      firstname: 'Մառևոս',
+      lastname: 'Ասատրյան',
+      surname: 'Գոռի',
+      phonenumber: '16-86',
+      key: false,
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString()
+    },
+    {
+      firstname: 'Հակոբ',
+      lastname: 'Ասլանյան',
+      surname: 'Արսենի',
+      phonenumber: '16-06',
+      key: false,
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString()
+    },
+    {
+      firstname: 'Թադևոս',
+      lastname: 'Ավետիսյան',
+      surname: 'Էդիկի',
+      phonenumber: '16-51',
+      key: false,
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString()
+    },
+    {
+      firstname: 'Գուրգեն',
+      lastname: 'Արսենյան',
+      surname: 'Բաբկենի',
+      phonenumber: '12-13',
+      key: false,
       created_at: new Date().toISOString(),
       updated_at: new Date().toISOString()
     },
@@ -211,36 +247,27 @@ async function seed(pg) {
 
   await pg('faction').insert([
     {
-      name: 'Ուժ Հայրենաց',
-      member1: 'Տիգրան Արզաքանչյան',
-      member2: 'քարտուղար Նատալյա Ռոտենբեռգ',
+      name: '<<ՔԱՂԱՔԱՑԻԱԿԱՆ ՊԱՅՄԱՆԱԳԻՐ',
+      member1: 'Կոնջորյան Հայկ',
+      member2: 'Արթուր Հովհաննիսյան',
       cityphone: '',
       internalphone: '13-33',
       created_at: new Date().toISOString(),
       updated_at: new Date().toISOString()
     },
     {
-      name: 'Քաղաքացիական Պայմանագիր',
-      member1: 'Նիկոլ Փաշինյան',
-      member2: 'քարտուղար Հայկ Կոնջորյան',
+      name: '<<ՀԱՅԱՍՏԱՆ>>',
+      member1: 'Օհանյան Սեյրան',
+      member2: 'Մինասյան Արծվիկ',
       cityphone: '',
       internalphone: '13-70',
       created_at: new Date().toISOString(),
       updated_at: new Date().toISOString()
     },
     {
-      name: 'Հայաստան Դաշինք',
-      member1: 'Տիգրան Արզաքանչյան',
-      member2: 'քարտուղար Նատալյա Ռոտենբեռգ',
-      cityphone: '',
-      internalphone: '13-33',
-      created_at: new Date().toISOString(),
-      updated_at: new Date().toISOString()
-    },
-    {
-      name: 'Պատիվ ՈՒնեմ',
-      member1: 'Սերժիկ Սարգսյան',
-      member2: 'քարտուղար Արթուր Վանեցյան',
+      name: '<<ՊԱՏԻՎ ՈՒՆԵՄ>>',
+      member1: 'Մամիջանյան Հայկ',
+      member2: 'Տիգրան Աբրահամյան',
       cityphone: '',
       internalphone: '14-65',
       created_at: new Date().toISOString(),
