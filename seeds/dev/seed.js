@@ -247,7 +247,7 @@ async function seed(pg) {
 
   await pg('faction').insert([
     {
-      name: '<<ՔԱՂԱՔԱՑԻԱԿԱՆ ՊԱՅՄԱՆԱԳԻՐ',
+      name: '<<ՔԱՂԱՔԱՑԻԱԿԱՆ ՊԱՅՄԱՆԱԳԻՐ>>',
       member1: 'Կոնջորյան Հայկ',
       member2: 'Արթուր Հովհաննիսյան',
       cityphone: '',
