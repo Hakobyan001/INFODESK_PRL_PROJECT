@@ -55,7 +55,7 @@ class App {
   _setCors() {
     this.app.use(
       cors({
-        origin: 'http://localhost:3006',
+        origin: 'http://34.159.23.115',
         methods: ['GET', 'PUT', 'POST', 'PATCH', 'DELETE'],
         allowedHeaders: ['Authorization', 'Content-Type', 'Origin'],
         credentials: true,
