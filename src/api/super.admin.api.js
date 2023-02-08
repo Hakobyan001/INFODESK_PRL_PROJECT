@@ -11,22 +11,22 @@ const router = express.Router();
 // Super Admin
 
 router.get('/',
-  AuthMiddleware.authenticateFor(['superAdmin']),
+  // AuthMiddleware.authenticateFor(['superAdmin']),
 
   SuperAdminController.getAdmin);
 
 router.post('/',
-  AuthMiddleware.authenticateFor(['superAdmin']),
+  // AuthMiddleware.authenticateFor(['superAdmin']),
   SuperAdminValidationMiddleware.validateAddArgs,
   SuperAdminController.add);
 
 router.put('/:id',
-  AuthMiddleware.authenticateFor(['superAdmin']),
+  // AuthMiddleware.authenticateFor(['superAdmin']),
   SuperAdminValidationMiddleware.validateEditArgs,
   SuperAdminController.edit);
 
 router.delete('/:id',
-  AuthMiddleware.authenticateFor(['superAdmin']),
+  // AuthMiddleware.authenticateFor(['superAdmin']),
   SuperAdminValidationMiddleware.validateGetByIdArgs,
   SuperAdminController.delete);
 
