@@ -14,17 +14,17 @@ router.get('/',
   CommitteeController.getCommittee);
 
 router.post('/',
-  // AuthMiddleware.authenticateFor(['admin']),
+  AuthMiddleware.authenticateFor(['admin']),
   CommitteeValidationMiddleware.validateAddArgs,
   CommitteeController.add);
 
 router.put('/:id',
-  // AuthMiddleware.authenticateFor(['admin']),
+  AuthMiddleware.authenticateFor(['admin']),
   CommitteeValidationMiddleware.validateEditArgs,
   CommitteeController.edit);
 
 router.delete('/:id',
-  // AuthMiddleware.authenticateFor(['admin']),
+  AuthMiddleware.authenticateFor(['admin']),
   CommitteeValidationMiddleware.validateGetByIdArgs,
   CommitteeController.delete);
 

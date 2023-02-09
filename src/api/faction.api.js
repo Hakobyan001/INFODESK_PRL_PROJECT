@@ -14,17 +14,17 @@ router.get('/',
   FactionController.getFaction);
 
 router.post('/',
-  // AuthMiddleware.authenticateFor(['admin']),
+  AuthMiddleware.authenticateFor(['admin']),
   FactionValidationMiddleware.validateAddArgs,
   FactionController.add);
 
 router.put('/:id',
-  // AuthMiddleware.authenticateFor(['admin']),
+  AuthMiddleware.authenticateFor(['admin']),
   FactionValidationMiddleware.validateEditArgs,
   FactionController.edit);
 
 router.delete('/:id',
-  // AuthMiddleware.authenticateFor(['admin']),
+  AuthMiddleware.authenticateFor(['admin']),
   FactionValidationMiddleware.validateGetByIdArgs,
   FactionController.delete);
 

@@ -32,7 +32,7 @@ export default class AuthMiddlaware {
     return (req, res, next) => {
       try {
         const authorizationHeader = req.headers.authorization;
-
+        console.log(authorizationHeader);
         if (!authorizationHeader) throw new UnauthorizedError('1');
 
         const accessToken = authorizationHeader.split(' ')[1];

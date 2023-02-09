@@ -14,17 +14,17 @@ router.get('/',
   ParlamentController.getUsers);
 
 router.post('/',
-  // AuthMiddleware.authenticateFor(['admin']),
+  AuthMiddleware.authenticateFor(['admin']),
   ParlamentValidationMiddleware.validateAddArgs,
   ParlamentController.add);
 
 router.put('/:id',
-  // AuthMiddleware.authenticateFor(['admin']),
+  AuthMiddleware.authenticateFor(['admin']),
   ParlamentValidationMiddleware.validateEditArgs,
   ParlamentController.edit);
 
 router.delete('/:id',
-  // AuthMiddleware.authenticateFor(['admin']),
+  AuthMiddleware.authenticateFor(['admin']),
   ParlamentValidationMiddleware.validateGetByIdArgs,
   ParlamentController.delete);
 

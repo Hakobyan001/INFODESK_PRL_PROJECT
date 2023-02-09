@@ -14,17 +14,17 @@ router.get('/',
   AcceptabilityController.getAcceptability);
 
 router.post('/',
-  // AuthMiddleware.authenticateFor(['admin']),
+  AuthMiddleware.authenticateFor(['admin']),
   AcceptabilityValidationMiddleware.validateAddArgs,
   AcceptabilityController.add);
 
 router.put('/:id',
-  // AuthMiddleware.authenticateFor(['admin']),
+  AuthMiddleware.authenticateFor(['admin']),
   AcceptabilityValidationMiddleware.validateEditArgs,
   AcceptabilityController.edit);
 
 router.delete('/:id',
-  // AuthMiddleware.authenticateFor(['admin']),
+  AuthMiddleware.authenticateFor(['admin']),
   AcceptabilityValidationMiddleware.validateGetByIdArgs,
   AcceptabilityController.delete);
 
