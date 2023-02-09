@@ -14,7 +14,7 @@ router.get('/',
   StandingCommitteeController.getText);
 
 router.post('/',
-  // AuthMiddleware.authenticateFor(['admin']),
+  AuthMiddleware.authenticateFor(['admin']),
   StandingCommitteeValidationMiddleware.validateAddArgs,
   StandingCommitteeController.add);
 
@@ -24,7 +24,7 @@ router.put('/:id',
   StandingCommitteeController.edit);
 
 router.delete('/:id',
-  // AuthMiddleware.authenticateFor(['admin']),
+  AuthMiddleware.authenticateFor(['admin']),
   StandingCommitteeValidationMiddleware.validateGetByIdArgs,
   StandingCommitteeController.delete);
 
