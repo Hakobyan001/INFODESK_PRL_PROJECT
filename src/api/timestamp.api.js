@@ -14,7 +14,7 @@ router.get('/',
   TimeStampController.getTime);
 
 router.post('/',
-  AuthMiddleware.authenticateFor(['admin']),
+  AuthMiddleware.authenticateFor(['admin', 'superAdmin']),
   TimeStampValidationMiddleware.validateAddArgs,
   TimeStampController.addTime);
 

@@ -14,17 +14,17 @@ router.get('/',
   UnitController.getUnits);
 
 router.post('/',
-  AuthMiddleware.authenticateFor(['admin']),
+  AuthMiddleware.authenticateFor(['admin', 'superAdmin']),
   UnitsValidationMiddleware.validateAddArgs,
   UnitController.add);
 
 router.put('/:id',
-  AuthMiddleware.authenticateFor(['admin']),
+  AuthMiddleware.authenticateFor(['admin', 'superAdmin']),
   UnitsValidationMiddleware.validateEditArgs,
   UnitController.edit);
 
 router.delete('/:id',
-  AuthMiddleware.authenticateFor(['admin']),
+  AuthMiddleware.authenticateFor(['admin', 'superAdmin']),
   UnitsValidationMiddleware.validateGetByIdArgs,
   UnitController.delete);
 

@@ -113,15 +113,6 @@ class App {
         credentials: true
       }
     });
-
-    //   io.on('connect', (client) => {
-    //     LoggerUtil.info(`Client by ${client.id} is connected`);
-    //     // MessageHandler.postAuthenticate(client);
-
-  //     client.on('disconnect', (reason) => {
-  //       LoggerUtil.info(`Client is disconnected... Reason: ${reason}`);
-  //     });
-  //   });
   }
 }
 

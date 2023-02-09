@@ -14,17 +14,17 @@ router.get('/',
   CitizenReceptionController.getText);
 
 router.post('/',
-  AuthMiddleware.authenticateFor(['admin']),
+  AuthMiddleware.authenticateFor(['admin', 'superAdmin']),
   CitizenReceptionValidationMiddleware.validateAddArgs,
   CitizenReceptionController.add);
 
 router.put('/:id',
-  AuthMiddleware.authenticateFor(['admin']),
+  AuthMiddleware.authenticateFor(['admin', 'superAdmin']),
   CitizenReceptionValidationMiddleware.validateEditArgs,
   CitizenReceptionController.edit);
 
 router.delete('/:id',
-  AuthMiddleware.authenticateFor(['admin']),
+  AuthMiddleware.authenticateFor(['admin', 'superAdmin']),
   CitizenReceptionValidationMiddleware.validateGetByIdArgs,
   CitizenReceptionController.delete);
 
