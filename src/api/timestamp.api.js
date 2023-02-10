@@ -18,4 +18,8 @@ router.post('/',
   TimeStampValidationMiddleware.validateAddArgs,
   TimeStampController.addTime);
 
+  router.get('/getAllDate',
+  AuthMiddleware.authenticateFor(['admin', 'superAdmin']),
+  TimeStampController.getAllDate); 
+
 export default router;

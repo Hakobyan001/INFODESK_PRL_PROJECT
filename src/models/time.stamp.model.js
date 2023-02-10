@@ -40,6 +40,9 @@ class TimeStampModel extends Model {
   static async addTime(date) {
     return TimeStampModel.query().insert(date);
   }
+  static async getAllDate() {
+    return TimeStampModel.query().select('*');
+  }
 
   static async delete() {
     return TimeStampModel.query()

@@ -10,6 +10,9 @@ export default class TimeStampServic {
     await TimeStampModel.delete();
     return TimeStampModel.addTime(date);
   }
+  static getAllDate() {
+    return TimeStampModel.getAllDate();
+  }
 }
 
 

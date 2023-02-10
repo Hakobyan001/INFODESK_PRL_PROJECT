@@ -23,4 +23,14 @@ export default class TimeStampController {
       next(error);
     }
   }
+
+  static async getAllDate(req, res, next) {
+    try {
+      const users = await TimeStampServic.getAllDate();
+
+      SuccessHandlerUtil.handleList(res, next, users);
+    } catch (error) {
+      next(error);
+    }
+  }
 }
