@@ -34,7 +34,7 @@ class TimeStampModel extends Model {
   }
 
   static getTime() {
-    return TimeStampModel.query().select('*');
+    return TimeStampModel.query().select('*').where('date','>=',new Date());
   }
 
   static async addTime(date) {

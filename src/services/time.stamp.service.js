@@ -5,15 +5,22 @@ export default class TimeStampServic {
     return TimeStampModel.getTime();
   }
 
-  static async addTime(date, allDate = []) {
-    for (const val in date) {
-      const timeNow = new Date();
+  static async addTime(date) {
 
-      if (date[val].date > timeNow) {
-        allDate.push(new Object({ date: date[val].date }));
-      }
-    }
     await TimeStampModel.delete();
-    return TimeStampModel.addTime(allDate);
+    return TimeStampModel.addTime(date);
   }
 }
+
+
+// static async addTime(date, allDate = []) {
+//   for (const val in date) {
+//     const timeNow = new Date();
+
+//     if (date[val].date >= timeNow) {
+//       allDate.push(new Object({ date: date[val].date }));
+//     }
+//   }
+//   await TimeStampModel.delete();
+//   return TimeStampModel.addTime(allDate);
+// }
