@@ -10,9 +10,9 @@ const config = {
     URL: process.env.PSQL_URL,
     PORT: process.env.PSQL_PORT || 5432,
     HOST: process.env.PSQL_HOST || 'localhost',
-    USER: process.env.PSQL_USER || 'infodesc',
-    DATABASE: process.env.PSQL_DATABASE || 'click',
-    PASSWORD: process.env.PSQL_PASSWORD || 'infodesc'
+    USER: process.env.PSQL_USER,
+    DATABASE: process.env.PSQL_DATABASE,
+    PASSWORD: process.env.PSQL_PASSWORD 
   },
 
   AUTH: {

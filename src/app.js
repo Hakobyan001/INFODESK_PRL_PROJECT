@@ -4,7 +4,6 @@ import cors from 'cors';
 import express from 'express';
 import morgan from 'morgan';
 import helmet from 'helmet';
-
 import { Server } from 'socket.io';
 
 // Local modules
@@ -55,7 +54,7 @@ class App {
   _setCors() {
     this.app.use(
       cors({
-        origin: 'http://34.159.23.115',
+        origin: process.env.CORS,
         methods: ['GET', 'PUT', 'POST', 'PATCH', 'DELETE'],
         allowedHeaders: ['Authorization', 'Content-Type', 'Origin'],
         credentials: true,
