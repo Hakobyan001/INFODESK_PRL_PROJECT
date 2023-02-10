@@ -1,3 +1,4 @@
+require('dotenv').config()
 const config = {
   ADMIN_PASSWORD: 'prime!@#$',
   LOG_LEVEL: process.env.LOG_LEVEL,
