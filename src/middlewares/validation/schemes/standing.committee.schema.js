@@ -15,7 +15,7 @@ const StandingCommitteeSchema = {
   addSchema: {
     body: Joi.object({
       title: Joi.string().min(1).max(99550),
-      text: Joi.string().max(999550)
+      text: Joi.string().min(0).max(999550)
     })
   },
 
@@ -25,7 +25,7 @@ const StandingCommitteeSchema = {
     }),
     body: Joi.object({
       title: Joi.string().min(1).max(99550),
-      text: Joi.string().max(99550)
+      text: Joi.string().min(0).max(99550)
 
     }).or(
       'title',
