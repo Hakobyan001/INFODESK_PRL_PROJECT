@@ -12,11 +12,11 @@ class FactionModel extends Model {
       required: [],
       properties: {
         id: { type: 'integer' },
-        name: { type: 'string', minLength: 1, maxLength: 255 },
-        member1: { type: 'string', minLength: 1, maxLength: 255 },
-        member2: { type: 'string', minLength: 1, maxLength: 255 },
-        cityphone: { type: 'string', minLength: 1, maxLength: 255 },
-        internalphone: { type: 'string', minLength: 1, maxLength: 255 }
+        name: { type: 'string', minLength: 1, maxLength: 8555 },
+        member1: { type: 'string', minLength: 1, maxLength: 9555 },
+        member2: { type: 'string', minLength: 1, maxLength: 9555 },
+        cityphone: { type: 'string', minLength: 1, maxLength: 7555 },
+        internalphone: { type: 'string', minLength: 1, maxLength: 7555 }
       }
     };
   }

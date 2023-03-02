@@ -16,17 +16,11 @@ class UsersModel extends Model {
       required: [],
       properties: {
         id: { type: 'integer' },
-        firstname: { type: 'string', minLength: 1, maxLength: 255 },
-        lastname: { type: 'string', minLength: 1, maxLength: 255 },
-        surname: { type: 'string', minLength: 1, maxLength: 255 },
-        phonenumber: { type: 'string', minLength: 1, maxLength: 255 },
-        key: { type: 'string', minLength: 1, maxLength: 255 }
-        // username: { type: 'string', minLength: 5, maxLength: 255 },
-        // password: { type: 'string', minLength: 3, maxLength: 255 },
-        // position: { type: 'string', minLength: 1, maxLength: 255 },
-        // picture: { type: 'string', minLength: 1, maxLength: 255 },
-        // role: { type: 'string', enum: Object.values(Role) },
-        // status: { type: 'string', enum: Object.values(Status) }
+        firstname: { type: 'string', minLength: 1, maxLength: 9255 },
+        lastname: { type: 'string', minLength: 1, maxLength: 9255 },
+        surname: { type: 'string', minLength: 1, maxLength: 9255 },
+        phonenumber: { type: 'string', minLength: 1, maxLength: 9255 },
+        key: { type: 'string', minLength: 1, maxLength: 9255 }
       }
     };
   }

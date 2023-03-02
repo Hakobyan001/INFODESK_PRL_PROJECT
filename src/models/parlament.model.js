@@ -12,11 +12,11 @@ class ParlamentModel extends Model {
       required: [],
       properties: {
         id: { type: 'integer' },
-        firstname: { type: 'string', minLength: 1, maxLength: 255 },
-        lastname: { type: 'string', minLength: 1, maxLength: 255 },
-        surname: { type: 'string', minLength: 1, maxLength: 255 },
-        phonenumber: { type: 'string', minLength: 1, maxLength: 255 },
-        key: { type: 'boolean', minLength: 1, maxLength: 255 }
+        firstname: { type: 'string', minLength: 1, maxLength: 8555 },
+        lastname: { type: 'string', minLength: 1, maxLength: 9555 },
+        surname: { type: 'string', minLength: 1, maxLength: 9555 },
+        phonenumber: { type: 'string', minLength: 1, maxLength: 9555 },
+        key: { type: 'boolean', minLength: 1, maxLength: 8555 }
       }
     };
   }

@@ -1,6 +1,6 @@
 require('dotenv').config()
 const config = {
-  ADMIN_PASSWORD: 'prime!@#$',
+  ADMIN_PASSWORD: '444',
   LOG_LEVEL: process.env.LOG_LEVEL,
   PORT: process.env.PORT || 3006,
   ONE_WAY_HASH_SECRET: process.env.ONE_WAY_HASH_SECRET,

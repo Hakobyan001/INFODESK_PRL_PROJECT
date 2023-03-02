@@ -12,11 +12,11 @@ class UnitModel extends Model {
       required: [],
       properties: {
         id: { type: 'integer' },
-        firstname: { type: 'string', minLength: 1, maxLength: 255 },
-        lastname: { type: 'string', minLength: 1, maxLength: 255 },
-        surname: { type: 'string', minLength: 1, maxLength: 255 },
-        phonenumber: { type: 'string', minLength: 1, maxLength: 255 },
-        key: { type: 'string', minLength: 1, maxLength: 255 }
+        firstname: { type: 'string', minLength: 1, maxLength: 9255 },
+        lastname: { type: 'string', minLength: 1, maxLength: 9255 },
+        surname: { type: 'string', minLength: 1, maxLength: 9255 },
+        phonenumber: { type: 'string', minLength: 1, maxLength: 9255 },
+        key: { type: 'string', minLength: 1, maxLength: 9255 }
       }
     };
   }

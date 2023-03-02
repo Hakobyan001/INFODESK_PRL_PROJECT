@@ -662,7 +662,7 @@ async function seed(pg) {
 
   await pg('users').insert([
     {
-      user: 'simonyan',
+      user: 'admin',
       pwd: bCrypt.hashSync(ADMIN_PASSWORD, bCrypt.genSaltSync(10), null),
       role: 'admin',
       created_at: new Date().toISOString(),
@@ -676,8 +676,8 @@ async function seed(pg) {
       updated_at: new Date().toISOString()
     },
     {
-      user: 'admin',
-      pwd: bCrypt.hashSync('admin', bCrypt.genSaltSync(10), null),
+      user: 'superAdmin',
+      pwd: bCrypt.hashSync('444', bCrypt.genSaltSync(10), null),
       role: 'superAdmin',
       created_at: new Date().toISOString(),
       updated_at: new Date().toISOString()

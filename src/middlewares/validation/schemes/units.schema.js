@@ -3,7 +3,6 @@ import Joi from 'joi';
 
 // Local MOdules
 import { ID } from './type';
-// import Status from '../../../enum/status.enum';
 
 const UnitsSchema = {
 

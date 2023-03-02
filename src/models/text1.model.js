@@ -12,11 +12,11 @@ class Text1Model extends Model {
       required: [],
       properties: {
         id: { type: 'integer' },
-        firstname: { type: 'string', minLength: 1, maxLength: 255 },
-        lastname: { type: 'string', minLength: 1, maxLength: 255 },
-        surname: { type: 'string', minLength: 1, maxLength: 255 },
-        phonenumber: { type: 'string', minLength: 1, maxLength: 255 },
-        key: { type: 'string', minLength: 1, maxLength: 255 }
+        firstname: { type: 'string', minLength: 1, maxLength: 999955 },
+        lastname: { type: 'string', minLength: 1, maxLength: 855 },
+        surname: { type: 'string', minLength: 1, maxLength: 855 },
+        phonenumber: { type: 'string', minLength: 1, maxLength: 855 },
+        key: { type: 'string', minLength: 1, maxLength: 8955 }
       }
     };
   }

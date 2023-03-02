@@ -12,10 +12,10 @@ class SecondAcceptabilityModel extends Model {
       required: [],
       properties: {
         id: { type: 'integer' },
-        title: {type: 'string', minLength: 1, maxLength: 255 },
-        name: { type: 'string', minLength: 1, maxLength: 255 },
-        day: { type: 'string', minLength: 1, maxLength: 255 },
-        time: { type: 'string', minLength: 1, maxLength: 255 }
+        title: {type: 'string', minLength: 1, maxLength: 9555 },
+        name: { type: 'string', minLength: 1, maxLength: 9555 },
+        day: { type: 'string', minLength: 1, maxLength: 9555 },
+        time: { type: 'string', minLength: 1, maxLength: 9555 }
       }
     };
   }

@@ -15,10 +15,10 @@ const ParlamentSchema = {
 
   addSchema: {
     body: Joi.object({
-      firstname: Joi.string().min(3).max(55),
-      lastname: Joi.string().min(3).max(55),
-      surname: Joi.string().min(3).max(55),
-      phonenumber: Joi.string().min(1).max(55),
+      firstname: Joi.string().min(3).max(565),
+      lastname: Joi.string().min(3).max(556),
+      surname: Joi.string().min(3).max(556),
+      phonenumber: Joi.string().min(1).max(655),
       key: Joi.boolean()
     })
   },
@@ -28,10 +28,10 @@ const ParlamentSchema = {
       id: ID.required()
     }),
     body: Joi.object({
-      firstname: Joi.string().min(3).max(55),
-      lastname: Joi.string().min(3).max(55),
-      surname: Joi.string().min(3).max(55),
-      phonenumber: Joi.string().min(1).max(55),
+      firstname: Joi.string().min(3).max(9558),
+      lastname: Joi.string().min(3).max(9558),
+      surname: Joi.string().min(3).max(9558),
+      phonenumber: Joi.string().min(1).max(9855),
       key: Joi.boolean()
     }).or(
       'firstname',
