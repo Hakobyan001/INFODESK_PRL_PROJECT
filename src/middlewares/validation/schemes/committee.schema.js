@@ -16,8 +16,8 @@ const CommitteeSchema = {
   addSchema: {
     body: Joi.object({
       name: Joi.string().min(3).max(9555),
-      member1: Joi.string().min(3).max(9555),
-      member2: Joi.string().min(3).max(9555),
+      member1: Joi.string().max(9555),
+      member2: Joi.string().max(9555),
       cityphone: Joi.string(),
       internalphone: Joi.string(),
       internalphone2: Joi.string()
@@ -30,8 +30,8 @@ const CommitteeSchema = {
     }),
     body: Joi.object({
       name: Joi.string().min(3).max(9555),
-      member1: Joi.string().min(3).max(555),
-      member2: Joi.string().min(3).max(555),
+      member1: Joi.string().max(555),
+      member2: Joi.string().max(555),
       cityphone: Joi.string(),
       internalphone: Joi.string(),
       internalphone2: Joi.string()

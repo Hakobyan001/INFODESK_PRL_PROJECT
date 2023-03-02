@@ -27,10 +27,10 @@ const AcceptabilitySchema = {
       id: ID.required()
     }),
     body: Joi.object({
-      title: Joi.string().min(3).max(555),
-      name: Joi.string().min(3).max(555),
-      day: Joi.string().min(3).max(555),
-      time: Joi.string().min(3).max(555)
+      title: Joi.string().max(555),
+      name: Joi.string().max(555),
+      day: Joi.string().max(555),
+      time: Joi.string().max(555)
     }).or(
       "title",
       'name',

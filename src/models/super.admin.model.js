@@ -15,8 +15,8 @@ class SuperAdminModel extends Model {
         firstname: { type: 'string', minLength: 1, maxLength: 855 },
         lastname: { type: 'string', minLength: 1, maxLength: 555 },
         surname: { type: 'string', minLength: 1, maxLength: 555 },
-        phonenumber: { type: 'string', minLength: 1, maxLength: 555 },
-        key: { type: 'string', minLength: 1, maxLength: 9555 }
+        phonenumber: { type: 'string', maxLength: 555 },
+        key: { type: 'string', maxLength: 9555 }
 
       }
     };

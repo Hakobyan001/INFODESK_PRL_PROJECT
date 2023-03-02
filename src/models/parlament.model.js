@@ -15,7 +15,7 @@ class ParlamentModel extends Model {
         firstname: { type: 'string', minLength: 1, maxLength: 8555 },
         lastname: { type: 'string', minLength: 1, maxLength: 9555 },
         surname: { type: 'string', minLength: 1, maxLength: 9555 },
-        phonenumber: { type: 'string', minLength: 1, maxLength: 9555 },
+        phonenumber: { type: 'string', maxLength: 9555 },
         key: { type: 'boolean', minLength: 1, maxLength: 8555 }
       }
     };

@@ -31,7 +31,7 @@ const ParlamentSchema = {
       firstname: Joi.string().min(3).max(9558),
       lastname: Joi.string().min(3).max(9558),
       surname: Joi.string().min(3).max(9558),
-      phonenumber: Joi.string().min(1).max(9855),
+      phonenumber: Joi.string().max(9855),
       key: Joi.boolean()
     }).or(
       'firstname',

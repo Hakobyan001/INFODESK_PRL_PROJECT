@@ -15,8 +15,8 @@ class Text2Model extends Model {
         firstname: { type: 'string', minLength: 1, maxLength: 9255 },
         lastname: { type: 'string', minLength: 1, maxLength: 92595 },
         surname: { type: 'string', minLength: 1, maxLength: 9255 },
-        phonenumber: { type: 'string', minLength: 1, maxLength: 8255 },
-        key: { type: 'string', minLength: 1, maxLength: 9255 }
+        phonenumber: { type: 'string', maxLength: 8255 },
+        key: { type: 'string', maxLength: 9255 }
       }
     };
   }

@@ -13,11 +13,11 @@ class AcceptabilityModel extends Model {
       properties: {
         id: { type: 'integer' },
         name: { type: 'string', minLength: 1, maxLength: 9555 },
-        member1: { type: 'string', minLength: 1, maxLength: 9855 },
-        member2: { type: 'string', minLength: 1, maxLength: 9555 },
-        cityphone: { type: 'string', minLength: 1, maxLength: 9555 },
-        internalphone: { type: 'string', minLength: 1, maxLength: 9555 },
-        internalphone2: { type: 'string', minLength: 1, maxLength: 9555 }
+        member1: { type: 'string',  maxLength: 9855 },
+        member2: { type: 'string',  maxLength: 9555 },
+        cityphone: { type: 'string',  maxLength: 9555 },
+        internalphone: { type: 'string',  maxLength: 9555 },
+        internalphone2: { type: 'string', maxLength: 9555 }
       }
     };
   }
