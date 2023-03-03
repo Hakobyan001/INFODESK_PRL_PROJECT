@@ -14,11 +14,11 @@ const FactionSchema = {
 
   addSchema: {
     body: Joi.object({
-      name: Joi.string().min(3).max(9585),
-      member1: Joi.string().min(0).max(855),
-      member2: Joi.string().min(0).max(555),
+      name: Joi.string(),
+      member1: Joi.string(),
+      member2: Joi.string(),
       cityphone: Joi.string().min(0),
-      internalphone: Joi.string().min(0)
+      internalphone: Joi.string()
     })
   },
 
@@ -27,11 +27,11 @@ const FactionSchema = {
       id: ID.required()
     }),
     body: Joi.object({
-      name: Joi.string().min(3).max(9555),
-      member1: Joi.string().min(0).max(555),
-      member2: Joi.string().min(0).max(555),
+      name: Joi.string(),
+      member1: Joi.string(),
+      member2: Joi.string(),
       cityphone: Joi.string().min(0),
-      internalphone: Joi.string().min(0)
+      internalphone: Joi.string()
     }).or(
       'name',
       'mamber1',
